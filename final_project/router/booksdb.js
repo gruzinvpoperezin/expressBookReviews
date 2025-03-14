@@ -11,4 +11,13 @@ let books = {
       10: {"author": "Samuel Beckett","title": "Molloy, Malone Dies, The Unnamable, the trilogy", "reviews": {} }
 }
 
-module.exports=books;
+function delay(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function getBooks() {
+      return new Promise((resolve) => {
+            resolve(books);
+      })
+}
+module.exports=getBooks;
